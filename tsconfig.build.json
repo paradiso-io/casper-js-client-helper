@@ -1,12 +1,23 @@
 {
-  "extends": "../../tsconfig.build.json",
-
+  "include": ["src/**/*"],
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitUseStrict": true,
+    "removeComments": true,
+    "declaration": true,
+    "target": "es5",
+    "lib": ["es2015", "dom"],
+    "module": "commonjs",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "typeRoots": ["node_modules/@types"],
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
     "outDir": "./dist"
   },
-
-  "include": [
-    "src/**/*"
-  ]
+  "exclude": ["node_modules", "**/*.spec..ts"]
 }
-
