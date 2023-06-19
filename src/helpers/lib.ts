@@ -10,7 +10,7 @@ import {
   CLString,
   CLValue,
   DeployUtil,
-  PUBLIC_KEY_ID,
+  PUBLIC_KEY_TYPE,
 } from 'casper-js-sdk'
 
 import {
@@ -22,7 +22,7 @@ import {
 import * as utils from './utils'
 
 export const createRecipientAddress = (recipient: RecipientType): CLKey => {
-  if (recipient.clType().toString() === PUBLIC_KEY_ID) {
+  if (recipient.clType().toString() === PUBLIC_KEY_TYPE) {
     return new CLKey(
       new CLAccountHash((recipient as CLPublicKey).toAccountHash()),
     )

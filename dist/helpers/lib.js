@@ -47,7 +47,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -74,7 +74,7 @@ exports.appendSignatureToUnsignedDeployAndSend = exports.createUnsignedContractC
 var casper_js_sdk_1 = require("casper-js-sdk");
 var utils = __importStar(require("./utils"));
 var createRecipientAddress = function (recipient) {
-    if (recipient.clType().toString() === casper_js_sdk_1.PUBLIC_KEY_ID) {
+    if (recipient.clType().toString() === casper_js_sdk_1.PUBLIC_KEY_TYPE) {
         return new casper_js_sdk_1.CLKey(new casper_js_sdk_1.CLAccountHash(recipient.toAccountHash()));
     }
     else {

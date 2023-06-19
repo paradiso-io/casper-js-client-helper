@@ -1,5 +1,5 @@
 import { CLAccountHash, CLByteArray, CLPublicKey, Keys, RuntimeArgs, DeployUtil } from 'casper-js-sdk';
-export declare type RecipientType = CLPublicKey | CLAccountHash | CLByteArray;
+export type RecipientType = CLPublicKey | CLAccountHash | CLByteArray;
 export interface IPendingDeploy {
     deployHash: string;
     deployType: any;

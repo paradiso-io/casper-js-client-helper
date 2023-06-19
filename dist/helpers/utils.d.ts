@@ -5,7 +5,7 @@ export declare const getBinary: (pathToBinary: string) => Uint8Array;
 export declare const getStateRootHash: (nodeAddress: string) => Promise<string>;
 export declare const getAccountInfo: any;
 export declare const getAccountNamedKeyValue: (accountInfo: any, namedKey: string) => any;
-export declare const getContractData: (nodeAddress: string, stateRootHash: string, contractHash: string, path?: string[]) => Promise<import("casper-js-sdk/dist/lib/StoredValue").StoredValue>;
+export declare const getContractData: (nodeAddress: string, stateRootHash: string, contractHash: string, path?: string[]) => Promise<import("casper-js-sdk").StoredValue>;
 export declare const contractDictionaryGetter: (nodeAddress: string, dictionaryItemKey: string, seedUref: string) => Promise<any>;
 export declare const contractHashToByteArray: (contractHash: string) => Uint8Array;
 export declare const sleep: (num: number) => Promise<unknown>;
